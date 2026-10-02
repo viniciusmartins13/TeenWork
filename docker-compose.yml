@@ -1,0 +1,26 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: teenwork
+    ports: ["3306:3306"]
+    volumes: [mysql-data:/var/lib/mysql]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 5s
+      retries: 20
+
+  api:
+    build: ./Backend
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=mysql;Port=3306;Database=teenwork;User=root;Password=root;"
+      Jwt__Key: "troque-esta-chave-em-producao-teenwork-2026-32+"
+      Cors__AllowedOrigins__0: "http://localhost:5173"
+    ports: ["5165:8080"]
+
+volumes:
+  mysql-data:

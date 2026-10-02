@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="TeenWork.API/TeenWork.API.csproj" />
+    <Project Path="TeenWork.Application/TeenWork.Application.csproj" />
+    <Project Path="TeenWork.Domain/TeenWork.Domain.csproj" />
+    <Project Path="TeenWork.Infrastructure/TeenWork.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="TeenWork.Tests/TeenWork.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>TeenWork.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Pomelo 9.0.0 (provedor MySQL) exige EF Core 9.0.x. Não atualize EF Core para 10.x. -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeenWork.Domain\TeenWork.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="TeenWork.Tests" />
+  </ItemGroup>
+</Project>
