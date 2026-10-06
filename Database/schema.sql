@@ -1,8 +1,4 @@
--- =====================================================================
--- TeenWork — esquema do banco de dados (MySQL 8+)
--- Gerado a partir do mesmo modelo da migration InitialCreate do EF Core.
--- Uso opcional: a API aplica as migrations automaticamente ao iniciar.
--- =====================================================================
+
 
 CREATE DATABASE IF NOT EXISTS `teenwork` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `teenwork`;
